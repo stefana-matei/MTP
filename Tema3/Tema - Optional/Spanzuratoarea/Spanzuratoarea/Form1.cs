@@ -17,7 +17,7 @@ namespace Spanzuratoarea
 
         private char[] cuvant;
         private string descriere;
-        private int punctaj, incercari, litereGasite;
+        private int punctaj, litereGasite;
         private int incercariCorecte, incercariGresite;
         private int oldLitereGasite = 0;
         private List<char> litereIncercate = new List<char>();
@@ -36,9 +36,10 @@ namespace Spanzuratoarea
             generareTextBox();
             afisareLabels();
 
-            this.oldLitereGasite = this.litereGasite;
 
+            this.oldLitereGasite = this.litereGasite;
         }
+
 
         private void generareLitere()
         {
@@ -47,6 +48,7 @@ namespace Spanzuratoarea
             label.Size = new System.Drawing.Size(70, 20);
             label.Text = "LITERE:";
             this.Controls.Add(label);
+
 
             for (int i = 65; i <= 90; i++)
             {
@@ -60,16 +62,21 @@ namespace Spanzuratoarea
             }
         }
 
+
         private void literaClick(object sender, EventArgs e)
         {
             char litera = ((System.Windows.Forms.Label)sender).Text.ToCharArray()[0];
 
+
             if (!this.litereIncercate.Contains(litera))
             {
+
                 this.litereIncercate.Add(litera);
+
 
                 // Rescriere box + verificare litere gasite
                 generareTextBox();
+
 
                 if(this.oldLitereGasite != this.litereGasite)
                 {
@@ -82,28 +89,39 @@ namespace Spanzuratoarea
                     this.incercariGresite++;
                     if (this.incercariGresite == incercariPermise)
                         iesireJoc();
-
                 }
 
+
                 this.oldLitereGasite = this.litereGasite;
+
 
                 // Succes
                 if (this.litereGasite == this.cuvant.Length) 
                     rezolvatCuSucces();
-
             }
 
             afisareLabels();
 
         }
 
+
         private void generareTextBox()
         {
+            Label sugestie = new Label();
             flowLayoutPanel1.Controls.Clear();
             this.litereGasite = 0;
 
+          
+            sugestie.Location = new System.Drawing.Point(10, 70);
+            sugestie.Size = new System.Drawing.Size(175, 37);
+            sugestie.Text = "Sugestie: " + this.descriere;
+            sugestie.Font = new Font("Microsoft Sans Serif", 10);
+            flowLayoutPanel1.Controls.Add(sugestie);
+
+
             for (int i = 0; i <= cuvant.Length - 1; i++)
             {
+
                 TextBox textBox = new TextBox();
                 char litera = cuvant[i];
 
@@ -120,12 +138,10 @@ namespace Spanzuratoarea
                 }
 
 
-                textBox.Location = new System.Drawing.Point(10 + i * 50, 25);
+                textBox.Location = new System.Drawing.Point(10 + i * 50, 10);
                 textBox.Size = new System.Drawing.Size(30, 20);
-                // textBox.Click
                 flowLayoutPanel1.Controls.Add(textBox);
             }
-
         }
 
 
@@ -167,13 +183,13 @@ namespace Spanzuratoarea
 
         private void afisarePunctaj()
         {
-            this.punctaj = this.incercariCorecte - this.incercariGresite;
+            this.punctaj = (this.incercariCorecte - this.incercariGresite) * 10;
 
             txtPunctaj.Text = this.punctaj.ToString();
         }
 
 
-        private void afisareLabelLitereIncercate()
+        private void afisareLitereIncercateLabel()
         {
             string text = "Litere incercate: ";
 
@@ -182,19 +198,20 @@ namespace Spanzuratoarea
             lblLitereIncercate.Text = text;
         }
 
-        private void afisareScoreLabels()
+
+        private void afisareScorLabels()
         {
             lblCorecte.Text = "Corecte: " + this.incercariCorecte.ToString();
             lblGresite.Text = "Gresite: " + this.incercariGresite.ToString();
         }
 
+
         private void afisareLabels()
         {
-            afisareLabelLitereIncercate();
-            afisareScoreLabels();
+            afisareLitereIncercateLabel();
+            afisareScorLabels();
             afisarePunctaj();
         }
-
 
 
         private void rezolvatCuSucces()
@@ -204,12 +221,11 @@ namespace Spanzuratoarea
             Application.Restart();
         }
 
+
         private void iesireJoc()
         {
             afisareLabels();
             MessageBox.Show("Ai pierdut!");
-            Application.Restart();
         }
-            
     }
 }
