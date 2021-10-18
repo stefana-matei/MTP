@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Tema1___MTP</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Exercitiu10.cs" />
+    <Compile Remove="Exercitiu11.cs" />
+    <Compile Remove="Exercitiu12.cs" />
+    <Compile Remove="Exercitiu13.cs" />
+    <Compile Remove="Exercitiu14.cs" />
+    <Compile Remove="Exercitiu15.cs" />
+    <Compile Remove="Exercitiu2.cs" />
+    <Compile Remove="Exercitiu3.cs" />
+    <Compile Remove="Exercitiu4.cs" />
+    <Compile Remove="Exercitiu5.cs" />
+    <Compile Remove="Exercitiu6.cs" />
+    <Compile Remove="Exercitiu7.cs" />
+    <Compile Remove="Exercitiu8.cs" />
+    <Compile Remove="Exercitiu9.cs" />
+  </ItemGroup>
+
+</Project>
