@@ -33,49 +33,60 @@ namespace Exercitiul1
 
             foreach(XmlNode node in list)
             {
+
                 Label label = new Label();
 
 
-                //if (node.Name == "textBox")
-                //{
-                //    string atributNume = "";
+                if (node.Name == "textBox")
+                {
+                    string atributNume = "";
 
-                //    try
-                //    {
-                //        atributNume = node.Attributes["nume"].Value;
-                //    }
-                //    catch (Exception eNume)
-                //    {
-                //        try
-                //        {
-                //            atributNume = node.Attributes["CNP"].Value;
-                //        }
-                //        catch (Exception eCNP)
-                //        {
-                //            //
-                //        }
-                //    }
+                    try
+                    {
+                        atributNume = node.Attributes["nume"].Value;
+                    }
+                    catch (Exception eNume)
+                    {
+                        try
+                        {
+                            atributNume = node.Attributes["CNP"].Value;
+                        }
+                        catch (Exception eCNP)
+                        {
+                            //
+                        }
+                    }
 
 
-                //    string atributDetalii = node.Attributes["detalii"].Value;
-                //    TextBox textBox = new TextBox();
-                //    textBox.Text = atributDetalii;
-                //    label.Text = atributNume;
-                //    textBox.Left = 100;
-                //    textBox.Top = height;
-                //    label.Top = height;
-                //    height += 30;
-                //    this.Controls.Add(label);
-                //    this.Controls.Add(textBox);
-                //}
+                    string atributDetalii = node.Attributes["detalii"].Value;
+                    TextBox textBox = new TextBox();
+                    textBox.Text = atributDetalii;
+                    textBox.Name = atributNume;
+                    label.Text = atributNume;
+                    
+
+                    textBox.Left = 100;
+                    textBox.Top = height;
+                    label.Top = height;
+                    height += 30;
+
+
+                    this.Controls.Add(label);
+                    this.Controls.Add(textBox);
+                }
                 if (node.Name == "radioButton")
                 {
+
                     Label lblRadioBtn = new Label();
                     string atributNume = node.Attributes["nume"].Value;
                     string atributDetalii = node.Attributes["detalii"].Value;
-                    lblRadioBtn.Text = atributNume;
-                    lblRadioBtn.Top = 90;
-                    //height += 60;
+                    
+                    
+                    lblRadioBtn.Text = atributDetalii;
+                    lblRadioBtn.Name = atributNume;
+                    lblRadioBtn.Location = new Point(0, 100);
+                    
+                    
                     this.Controls.Add(lblRadioBtn);
 
 
@@ -87,14 +98,20 @@ namespace Exercitiul1
                         {
                             radioButton[i] = new RadioButton();
                             radioButton[i].Text = node.ChildNodes[i].InnerText;
+                            radioButton[i].Location = new Point(100 + i * 104, 96);
                             this.Controls.Add(radioButton[i]);
                         }
                     }
-                   
-
+                }
+                if(node.Name == "checkBox")
+                {
+                    // TODO 
+                }
+                if(node.Name == "listBox")
+                {
+                    //  TODO
                 }
             }
-
         }
     }
 }
