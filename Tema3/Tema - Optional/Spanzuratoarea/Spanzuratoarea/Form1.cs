@@ -101,19 +101,19 @@ namespace Spanzuratoarea
             }
 
             afisareLabels();
-
         }
 
 
         private void generareTextBox()
         {
+
             Label sugestie = new Label();
             flowLayoutPanel1.Controls.Clear();
             this.litereGasite = 0;
 
           
             sugestie.Location = new System.Drawing.Point(10, 70);
-            sugestie.Size = new System.Drawing.Size(175, 37);
+            sugestie.Size = new System.Drawing.Size(752, 37);
             sugestie.Text = "Sugestie: " + this.descriere;
             sugestie.Font = new Font("Microsoft Sans Serif", 10);
             flowLayoutPanel1.Controls.Add(sugestie);
@@ -138,7 +138,7 @@ namespace Spanzuratoarea
                 }
 
 
-                textBox.Location = new System.Drawing.Point(10 + i * 50, 10);
+                textBox.Location = new System.Drawing.Point(10 + i * 50, 200);
                 textBox.Size = new System.Drawing.Size(30, 20);
                 flowLayoutPanel1.Controls.Add(textBox);
             }
@@ -226,6 +226,7 @@ namespace Spanzuratoarea
         {
             afisareLabels();
             MessageBox.Show("Ai pierdut!");
+            Application.Restart();
         }
     }
 }
