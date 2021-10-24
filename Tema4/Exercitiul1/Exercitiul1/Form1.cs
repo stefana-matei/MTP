@@ -17,12 +17,15 @@ namespace Exercitiul1
     {
         public Form1()
         {
+
             InitializeComponent();
             this.MinimizeBox = false;
             this.MaximizeBox = false;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            int xOffSet = 20;
             int height = 0;
-            int i = 0;
+
+
             XmlDocument xmlDocument = new XmlDocument();
             XmlNode xmlNode;
             FileStream fileStream = new FileStream("fisier.xml", FileMode.Open, FileAccess.Read);
@@ -33,45 +36,28 @@ namespace Exercitiul1
 
             foreach(XmlNode node in list)
             {
-
-                Label label = new Label();
-
-
+                
                 if (node.Name == "textBox")
                 {
-                    string atributNume = "";
-
-                    try
-                    {
-                        atributNume = node.Attributes["nume"].Value;
-                    }
-                    catch (Exception eNume)
-                    {
-                        try
-                        {
-                            atributNume = node.Attributes["CNP"].Value;
-                        }
-                        catch (Exception eCNP)
-                        {
-                            //
-                        }
-                    }
-
-
+                    Label lblTextBox = new Label();
+                    string atributNume = node.Attributes["nume"].Value;
                     string atributDetalii = node.Attributes["detalii"].Value;
+                    
+
+                    lblTextBox.Text = atributNume;
+                    lblTextBox.Left = xOffSet;
+
+
                     TextBox textBox = new TextBox();
                     textBox.Text = atributDetalii;
                     textBox.Name = atributNume;
-                    label.Text = atributNume;
-                    
-
-                    textBox.Left = 100;
+                    textBox.Left = xOffSet + 100;
                     textBox.Top = height;
-                    label.Top = height;
+                    lblTextBox.Top = height;
                     height += 30;
 
 
-                    this.Controls.Add(label);
+                    this.Controls.Add(lblTextBox);
                     this.Controls.Add(textBox);
                 }
                 if (node.Name == "radioButton")
@@ -80,13 +66,11 @@ namespace Exercitiul1
                     Label lblRadioBtn = new Label();
                     string atributNume = node.Attributes["nume"].Value;
                     string atributDetalii = node.Attributes["detalii"].Value;
-                    
-                    
+
+
                     lblRadioBtn.Text = atributDetalii;
                     lblRadioBtn.Name = atributNume;
-                    lblRadioBtn.Location = new Point(0, 100);
-                    
-                    
+                    lblRadioBtn.Location = new Point(xOffSet, 100);
                     this.Controls.Add(lblRadioBtn);
 
 
@@ -94,22 +78,71 @@ namespace Exercitiul1
                     {
                         XmlNodeList nodeList = node.ChildNodes;
                         var radioButton = new RadioButton[nodeList.Count];
-                        for (i = 0; i <= nodeList.Count - 1; i++)
+                        for (int i = 0; i < nodeList.Count; i++)
                         {
                             radioButton[i] = new RadioButton();
-                            radioButton[i].Text = node.ChildNodes[i].InnerText;
-                            radioButton[i].Location = new Point(100 + i * 104, 96);
+                            radioButton[i].Text = nodeList[i].InnerText;
+                            radioButton[i].Location = new Point(xOffSet + 100 + i * 104, 96);
                             this.Controls.Add(radioButton[i]);
                         }
                     }
                 }
-                if(node.Name == "checkBox")
+                if (node.Name == "checkBox")
                 {
-                    // TODO 
+
+                    Label lblCheckBox = new Label();
+                    string atributNume = node.Attributes["nume"].Value;
+                    string atributDetalii = node.Attributes["detalii"].Value;
+
+
+                    lblCheckBox.Text = atributDetalii;
+                    lblCheckBox.Name = atributNume;
+                    lblCheckBox.Location = new Point(xOffSet, 137);
+                    lblCheckBox.AutoSize = true;
+                    this.Controls.Add(lblCheckBox);
+                    
+
+                    if (node.HasChildNodes)
+                    {
+                        XmlNodeList nodeList = node.ChildNodes;
+                        var ckbLP = new CheckBox[nodeList.Count];
+                        for (int i = 0; i < (nodeList.Count); i++)
+                        {
+                            ckbLP[i] = new CheckBox();
+                            ckbLP[i].Text = nodeList[i].InnerText;
+                            ckbLP[i].Location = new Point(xOffSet, 160 + i * 25);
+                            this.Controls.Add(ckbLP[i]);
+                        }
+                    }
+
                 }
                 if(node.Name == "listBox")
                 {
-                    //  TODO
+                    Label lblListBox = new Label();
+                    string atributJudet = node.Attributes["judet"].Value;
+                    string atributDetalii = node.Attributes["detalii"].Value;
+
+                    lblListBox.Name = atributJudet;
+                    lblListBox.Text = atributDetalii;
+                    lblListBox.Location = new Point(xOffSet, 300);
+                    this.Controls.Add(lblListBox);
+
+
+                    if (node.HasChildNodes)
+                    {
+                        XmlNodeList nodeList = node.ChildNodes;
+                        var lsbJudet = new ListBox();
+
+
+                        lsbJudet = new ListBox();
+                        for (int i = 0; i < nodeList.Count; i++)
+                        {
+                            lsbJudet.Items.Add(nodeList[i].InnerText);
+                            lsbJudet.Location = new System.Drawing.Point(xOffSet, 330) ;
+                            lsbJudet.Size = new System.Drawing.Size(xOffSet + 130, 95);
+                            this.Controls.Add(lsbJudet);
+                        }
+                    }
                 }
             }
         }
