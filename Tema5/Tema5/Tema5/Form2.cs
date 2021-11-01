@@ -12,9 +12,17 @@ namespace Tema5
 {
     public partial class Form2 : Form
     {
-        public Form2()
+        string nume, test;
+
+
+        public Form2(string nume, string test)
         {
             InitializeComponent();
+            this.nume = nume;
+            this.test = test;
+            this.MinimizeBox = false;
+            this.MaximizeBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
     }
 }
