@@ -128,6 +128,7 @@ namespace Tema5
             this.btnUrmIntrebare.TabIndex = 17;
             this.btnUrmIntrebare.Text = "Urmatoarea intrebare";
             this.btnUrmIntrebare.UseVisualStyleBackColor = true;
+            this.btnUrmIntrebare.Click += new System.EventHandler(this.btnUrmIntrebare_Click);
             // 
             // txtRaspunsuriCorecte
             // 
@@ -155,6 +156,7 @@ namespace Tema5
             this.Controls.Add(this.lblCandidat);
             this.Name = "Form2";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picbPoza)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
