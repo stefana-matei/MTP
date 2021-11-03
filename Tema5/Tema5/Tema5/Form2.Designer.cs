@@ -40,6 +40,7 @@ namespace Tema5
             this.txtPunctaj = new System.Windows.Forms.TextBox();
             this.btnUrmIntrebare = new System.Windows.Forms.Button();
             this.txtRaspunsuriCorecte = new System.Windows.Forms.TextBox();
+            this.btnRezultatTest = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picbPoza)).BeginInit();
             this.SuspendLayout();
             // 
@@ -122,7 +123,7 @@ namespace Tema5
             // btnUrmIntrebare
             // 
             this.btnUrmIntrebare.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUrmIntrebare.Location = new System.Drawing.Point(699, 622);
+            this.btnUrmIntrebare.Location = new System.Drawing.Point(419, 622);
             this.btnUrmIntrebare.Name = "btnUrmIntrebare";
             this.btnUrmIntrebare.Size = new System.Drawing.Size(164, 67);
             this.btnUrmIntrebare.TabIndex = 17;
@@ -133,16 +134,28 @@ namespace Tema5
             // txtRaspunsuriCorecte
             // 
             this.txtRaspunsuriCorecte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRaspunsuriCorecte.Location = new System.Drawing.Point(925, 639);
+            this.txtRaspunsuriCorecte.Location = new System.Drawing.Point(663, 647);
             this.txtRaspunsuriCorecte.Name = "txtRaspunsuriCorecte";
             this.txtRaspunsuriCorecte.Size = new System.Drawing.Size(112, 30);
             this.txtRaspunsuriCorecte.TabIndex = 18;
+            // 
+            // btnRezultatTest
+            // 
+            this.btnRezultatTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRezultatTest.Location = new System.Drawing.Point(873, 622);
+            this.btnRezultatTest.Name = "btnRezultatTest";
+            this.btnRezultatTest.Size = new System.Drawing.Size(164, 67);
+            this.btnRezultatTest.TabIndex = 19;
+            this.btnRezultatTest.Text = "Rezultatele testului";
+            this.btnRezultatTest.UseVisualStyleBackColor = true;
+            this.btnRezultatTest.Click += new System.EventHandler(this.btnRezultatTest_Click);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1073, 711);
+            this.Controls.Add(this.btnRezultatTest);
             this.Controls.Add(this.txtRaspunsuriCorecte);
             this.Controls.Add(this.btnUrmIntrebare);
             this.Controls.Add(this.txtPunctaj);
@@ -176,5 +189,6 @@ namespace Tema5
         private System.Windows.Forms.TextBox txtPunctaj;
         private System.Windows.Forms.Button btnUrmIntrebare;
         private System.Windows.Forms.TextBox txtRaspunsuriCorecte;
+        private System.Windows.Forms.Button btnRezultatTest;
     }
 }

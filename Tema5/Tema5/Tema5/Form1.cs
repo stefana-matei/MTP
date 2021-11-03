@@ -98,6 +98,7 @@ namespace Tema5
         {
             string nume = txtNume.Text;
             string test = cmbTest.Text;
+            this.Visible = false;
             Form2 form2 = new Form2(nume, test);
             form2.ShowDialog();
         }

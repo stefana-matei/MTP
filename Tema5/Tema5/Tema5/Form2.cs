@@ -33,19 +33,17 @@ namespace Tema5
         public int totalIntrebari;
         public int punctaj = 0;
         public int intrebareCurenta = 0;
-
+        
 
         private void Form2_Load(object sender, EventArgs e)
         {
             CitireFisierXML();
         }
-
+        
 
         private void CitireFisierXML()
         {
             txtCandidat.Text = nume;
- 
-
             XmlDocument xmlDocument = new XmlDocument();
             XmlNode xmlNode;
             FileStream fileStream = new FileStream(test + ".xml", FileMode.Open, FileAccess.Read);
@@ -60,7 +58,7 @@ namespace Tema5
                 string tipIntrebare = "";
                 string textIntrebare = "";
                 int nrVarianteRaspuns = 0;
-                string[] varianteRaspuns = new string[2];
+                string[] varianteRaspuns = new string[3];
                 string pathPoza = ""; // daca exista
                 string raspunsuriCorecte = "";
 
@@ -160,8 +158,6 @@ namespace Tema5
             int nrVariante = flpVarianteRaspuns.Controls.Count;
 
 
-
-
             for (int i = 1; i <= nrVariante; i++)
             {
                 bool individualCheck = false;
@@ -194,10 +190,11 @@ namespace Tema5
                     if (radioButton.Checked == true && raspunsCorect.Contains(i.ToString()))
                     {
                         punctaj++;
-                        individualCheck = true;
                         individualCorect = true;
                         check = true;
                     }
+                    individualCheck = radioButton.Checked;
+
                 }
 
                 // Tinem minte in intrebarea afisata ce raspunsuri au fost corecte
@@ -235,11 +232,7 @@ namespace Tema5
             {
                 MessageBox.Show("Testul s-a incheiat!");
                 btnUrmIntrebare.Enabled = false;
-                this.VerificareFinala();
             }
-
-
-
         }
 
         private void Incarcare_variante_raspuns(int x)
@@ -273,46 +266,66 @@ namespace Tema5
             }
         }
 
-        private void VerificareFinala()
+
+        private void btnRezultatTest_Click(object sender, EventArgs e)
         {
-            foreach(Intrebare intrebare in TestGrila)
-            {
-                // Check if user fucked up
-                // MessageBox.Show(intrebare.UserPass.ToString());
-
-                string afisare = "";
-
-                // Per intrebare
-                if(intrebare.UserPass)
-                {
-                    afisare += "Userul a raspuns corect la intrebare! \n";
-                }
-                else
-                {
-                    afisare += "Userul a gresit intrebarea! \n";
-                }
-
-
-                // Per raspuns indiferent de corectitudine
-                afisare += "\n Raspunsuri: ";
-
-                foreach (bool checkbox in intrebare.UserRaspunsuri)
-                {
-                    afisare += checkbox.ToString();
-                }
-
-
-                // Per raspuns corect
-                afisare += "\n Corecte:       ";
-                foreach (bool checkbox in intrebare.UserRaspunsuriCorecte)
-                {
-                    afisare += checkbox.ToString();
-                }
-
-                MessageBox.Show(afisare);
-            }
+            generareFisierXML();
+            Application.Restart();
         }
 
 
+        private void generareFisierXML()
+        {
+
+            XmlDocument xmlDocument = new XmlDocument();
+            XmlNode rootNode = xmlDocument.CreateElement("utilizator");
+            xmlDocument.AppendChild(rootNode);
+
+
+            foreach (Intrebare intrebare in TestGrila)
+            {
+
+                XmlNode intrebareNode = xmlDocument.CreateElement("intrebare");
+                rootNode.AppendChild(intrebareNode);
+
+
+                XmlNode nrIntrebareNode = xmlDocument.CreateElement("nrIntrebare");
+                nrIntrebareNode.InnerText = intrebare.NrIntrebare.ToString();
+                intrebareNode.AppendChild(nrIntrebareNode);
+
+
+                XmlNode tipIntrebareNode = xmlDocument.CreateElement("tipIntrebare");
+                tipIntrebareNode.InnerText = intrebare.TipIntrebare;
+                intrebareNode.AppendChild(tipIntrebareNode);
+                
+                
+                XmlNode textIntrebareNode = xmlDocument.CreateElement("textIntrebare");
+                textIntrebareNode.InnerText = intrebare.TextIntrebare;
+                intrebareNode.AppendChild(textIntrebareNode);
+
+
+                XmlNode raspunsuriNode = xmlDocument.CreateElement("raspunsuriUtilizator");
+                for (int i = 0; i < intrebare.UserRaspunsuri.Length; i++)
+                {
+                    XmlNode raspuns = xmlDocument.CreateElement("raspuns");
+
+                    raspuns.InnerText = (i + 1).ToString() +
+                      ": " +
+                       (intrebare.UserRaspunsuri[i] ? "⚫ " : "⚪ ") +
+                       (intrebare.UserRaspunsuriCorecte[i] ?
+                           "corect" :
+                            (intrebare.UserRaspunsuri[i] ? "gresit" : "")
+                      );
+
+                    raspunsuriNode.AppendChild(raspuns);
+                }
+                intrebareNode.AppendChild(raspunsuriNode);
+            }
+
+            xmlDocument.Save("rezultate.log");
+
+
+            MessageBox.Show("S-a creat fisierul cu rezultatele testului!");
+        }
     }
 }

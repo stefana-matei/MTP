@@ -38,9 +38,6 @@ namespace Tema5
         }
 
 
-
-
-
         public int NrIntrebare { get => nrIntrebare; set => nrIntrebare = value; }
         public string TipIntrebare { get => tipIntrebare; set => tipIntrebare = value; }
         public string TextIntrebare { get => textIntrebare; set => textIntrebare = value; }
