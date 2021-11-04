@@ -18,9 +18,9 @@ namespace Tema5
         string raspunsCorect;
 
         // user raspunsuri
-        bool userPass = false;        // Daca toate raspunsurile au fost corecte
-        bool[] userRaspunsuri;        // Tinem minte raspunsurile userului
-        bool[] userRaspunsuriCorecte; // Tinem minte daca fiecare raspuns a fost corect
+        bool userPass = false;        // daca toate raspunsurile au fost corecte
+        bool[] userRaspunsuri;        // tinem minte raspunsurile userului
+        bool[] userRaspunsuriCorecte; // tinem minte daca fiecare raspuns a fost corect
 
 
         public Intrebare(int nrIntrebare, string tipIntrebare, string intrebare, int nrVarianteRaspuns, string[] varianteRaspuns, string pathPoza, string raspunsCorect)

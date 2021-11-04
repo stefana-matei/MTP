@@ -235,6 +235,7 @@ namespace Tema5
             }
         }
 
+
         private void Incarcare_variante_raspuns(int x)
         {
             this.intrebareAfisata = TestGrila[x];
@@ -309,11 +310,9 @@ namespace Tema5
                 {
                     XmlNode raspuns = xmlDocument.CreateElement("raspuns");
 
-                    raspuns.InnerText = (i + 1).ToString() +
-                      ": " +
+                    raspuns.InnerText = (i + 1).ToString() + ": " +
                        (intrebare.UserRaspunsuri[i] ? "⚫ " : "⚪ ") +
-                       (intrebare.UserRaspunsuriCorecte[i] ?
-                           "corect" :
+                       (intrebare.UserRaspunsuriCorecte[i] ? "corect" :
                             (intrebare.UserRaspunsuri[i] ? "gresit" : "")
                       );
 
