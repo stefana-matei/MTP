@@ -105,7 +105,7 @@ namespace Tema6
             // btnVizualizareFisaPacient
             // 
             this.btnVizualizareFisaPacient.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVizualizareFisaPacient.Location = new System.Drawing.Point(512, 567);
+            this.btnVizualizareFisaPacient.Location = new System.Drawing.Point(749, 567);
             this.btnVizualizareFisaPacient.Name = "btnVizualizareFisaPacient";
             this.btnVizualizareFisaPacient.Size = new System.Drawing.Size(193, 66);
             this.btnVizualizareFisaPacient.TabIndex = 6;
@@ -115,17 +115,18 @@ namespace Tema6
             // btnAdgRadiografii
             // 
             this.btnAdgRadiografii.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdgRadiografii.Location = new System.Drawing.Point(749, 567);
+            this.btnAdgRadiografii.Location = new System.Drawing.Point(509, 567);
             this.btnAdgRadiografii.Name = "btnAdgRadiografii";
             this.btnAdgRadiografii.Size = new System.Drawing.Size(193, 66);
             this.btnAdgRadiografii.TabIndex = 7;
             this.btnAdgRadiografii.Text = "Adauga radiografii";
             this.btnAdgRadiografii.UseVisualStyleBackColor = true;
+            this.btnAdgRadiografii.Click += new System.EventHandler(this.btnAdgRadiografii_Click);
             // 
             // btnInchidereAplicatie
             // 
             this.btnInchidereAplicatie.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInchidereAplicatie.Location = new System.Drawing.Point(378, 670);
+            this.btnInchidereAplicatie.Location = new System.Drawing.Point(374, 675);
             this.btnInchidereAplicatie.Name = "btnInchidereAplicatie";
             this.btnInchidereAplicatie.Size = new System.Drawing.Size(193, 66);
             this.btnInchidereAplicatie.TabIndex = 8;
@@ -144,11 +145,11 @@ namespace Tema6
             this.btnAdaugaPacient.UseVisualStyleBackColor = true;
             this.btnAdaugaPacient.Click += new System.EventHandler(this.btnAdaugaPacient_Click);
             // 
-            // Form1
+            // Pacient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(968, 757);
+            this.ClientSize = new System.Drawing.Size(968, 769);
             this.Controls.Add(this.btnAdaugaPacient);
             this.Controls.Add(this.btnInchidereAplicatie);
             this.Controls.Add(this.btnAdgRadiografii);
@@ -159,7 +160,7 @@ namespace Tema6
             this.Controls.Add(this.txtNumeCautat);
             this.Controls.Add(this.lblNumeCautat);
             this.Controls.Add(this.lblPacienti);
-            this.Name = "Form1";
+            this.Name = "Pacient";
             this.Text = "Pacienti";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBazaDate)).EndInit();

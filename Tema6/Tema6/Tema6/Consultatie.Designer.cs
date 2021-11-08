@@ -35,7 +35,7 @@ namespace Tema6
             this.label3 = new System.Windows.Forms.Label();
             this.dtpData = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtSimtome = new System.Windows.Forms.TextBox();
+            this.txtSimptome = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtDiagnostic = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -93,16 +93,16 @@ namespace Tema6
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(32, 330);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 25);
+            this.label4.Size = new System.Drawing.Size(100, 25);
             this.label4.TabIndex = 5;
-            this.label4.Text = "Simtome";
+            this.label4.Text = "Simptome";
             // 
-            // txtSimtome
+            // txtSimptome
             // 
-            this.txtSimtome.Location = new System.Drawing.Point(184, 332);
-            this.txtSimtome.Name = "txtSimtome";
-            this.txtSimtome.Size = new System.Drawing.Size(317, 22);
-            this.txtSimtome.TabIndex = 6;
+            this.txtSimptome.Location = new System.Drawing.Point(184, 332);
+            this.txtSimptome.Name = "txtSimptome";
+            this.txtSimptome.Size = new System.Drawing.Size(317, 22);
+            this.txtSimptome.TabIndex = 6;
             // 
             // label5
             // 
@@ -159,7 +159,7 @@ namespace Tema6
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtDiagnostic);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtSimtome);
+            this.Controls.Add(this.txtSimptome);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dtpData);
             this.Controls.Add(this.label3);
@@ -181,7 +181,7 @@ namespace Tema6
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dtpData;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtSimtome;
+        private System.Windows.Forms.TextBox txtSimptome;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtDiagnostic;
         private System.Windows.Forms.Label label6;

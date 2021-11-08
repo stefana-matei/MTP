@@ -26,6 +26,8 @@ namespace Tema6
             txtCNP.Text = cnp;
         }
 
+
+        //  adaugare consultatie in BD
         private void btnAdaugaConsultatie_Click(object sender, EventArgs e)
         {
             if (txtCNP.Text != string.Empty)
@@ -39,7 +41,7 @@ namespace Tema6
                 SqlCommand sqlCommand = new SqlCommand(insertConsultatie, sqlConnection);
                 sqlCommand.Parameters.AddWithValue("@cnp", txtCNP.Text);
                 sqlCommand.Parameters.AddWithValue("@data", dtpData.Value);
-                sqlCommand.Parameters.AddWithValue("@simptome", txtSimtome.Text);
+                sqlCommand.Parameters.AddWithValue("@simptome", txtSimptome.Text);
                 sqlCommand.Parameters.AddWithValue("@diagnostic", txtDiagnostic.Text);
                 sqlCommand.Parameters.AddWithValue("@tratament", txtTratament.Text);
                 sqlCommand.ExecuteNonQuery();

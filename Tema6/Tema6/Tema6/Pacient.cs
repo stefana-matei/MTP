@@ -90,5 +90,17 @@ namespace Tema6
             else
                 MessageBox.Show("Trebuie selectat un pacient pentru a adauga o consultatie!", "Atentionare", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
+
+
+        private void btnAdgRadiografii_Click(object sender, EventArgs e)
+        {
+            if (dgvBazaDate.CurrentRow.Selected)
+            {
+                Radiografie radiografie = new Radiografie(cnp);
+                radiografie.ShowDialog();
+            }
+            else
+                MessageBox.Show("Trebuie selectat un pacient pentru a adauga o radiografie!", "Atentionare", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
     }
 }
