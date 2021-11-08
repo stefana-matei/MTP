@@ -91,9 +91,6 @@ namespace Tema6
             }
             else
                 MessageBox.Show("Trebuie selectat un pacient pentru a adauga o consultatie!", "Atentionare", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-
-
         }
     }
 }
