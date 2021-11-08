@@ -31,7 +31,7 @@ namespace Tema6
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtCNPPacient = new System.Windows.Forms.TextBox();
+            this.txtCNP = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dtpData = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,7 +40,7 @@ namespace Tema6
             this.txtDiagnostic = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtTratament = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAdaugaConsultatie = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -63,12 +63,12 @@ namespace Tema6
             this.label2.TabIndex = 1;
             this.label2.Text = "CNP pacient";
             // 
-            // txtCNPPacient
+            // txtCNP
             // 
-            this.txtCNPPacient.Location = new System.Drawing.Point(184, 145);
-            this.txtCNPPacient.Name = "txtCNPPacient";
-            this.txtCNPPacient.Size = new System.Drawing.Size(249, 22);
-            this.txtCNPPacient.TabIndex = 2;
+            this.txtCNP.Location = new System.Drawing.Point(184, 145);
+            this.txtCNP.Name = "txtCNP";
+            this.txtCNP.Size = new System.Drawing.Size(249, 22);
+            this.txtCNP.TabIndex = 2;
             // 
             // label3
             // 
@@ -138,22 +138,23 @@ namespace Tema6
             this.txtTratament.Size = new System.Drawing.Size(317, 22);
             this.txtTratament.TabIndex = 10;
             // 
-            // button1
+            // btnAdaugaConsultatie
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(217, 620);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(198, 53);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Adauga consultatie";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAdaugaConsultatie.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdaugaConsultatie.Location = new System.Drawing.Point(217, 620);
+            this.btnAdaugaConsultatie.Name = "btnAdaugaConsultatie";
+            this.btnAdaugaConsultatie.Size = new System.Drawing.Size(198, 53);
+            this.btnAdaugaConsultatie.TabIndex = 11;
+            this.btnAdaugaConsultatie.Text = "Adauga consultatie";
+            this.btnAdaugaConsultatie.UseVisualStyleBackColor = true;
+            this.btnAdaugaConsultatie.Click += new System.EventHandler(this.btnAdaugaConsultatie_Click);
             // 
             // Consultatie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(625, 698);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAdaugaConsultatie);
             this.Controls.Add(this.txtTratament);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtDiagnostic);
@@ -162,7 +163,7 @@ namespace Tema6
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dtpData);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtCNPPacient);
+            this.Controls.Add(this.txtCNP);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Consultatie";
@@ -176,7 +177,7 @@ namespace Tema6
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtCNPPacient;
+        private System.Windows.Forms.TextBox txtCNP;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dtpData;
         private System.Windows.Forms.Label label4;
@@ -185,6 +186,6 @@ namespace Tema6
         private System.Windows.Forms.TextBox txtDiagnostic;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtTratament;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAdaugaConsultatie;
     }
 }

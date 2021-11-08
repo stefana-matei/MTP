@@ -24,7 +24,6 @@ namespace Tema6
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
             string connect = @"Data source=DESKTOP-Q8KT1F7\WINCC;Initial catalog=Pediatrie;Integrated Security=True";
             SqlConnection sqlConnection = new SqlConnection(connect);
             sqlConnection.Open();
@@ -41,7 +40,6 @@ namespace Tema6
 
         private void btnCautareNume_Click(object sender, EventArgs e)
         {
-
             string connect = @"Data source=DESKTOP-Q8KT1F7\WINCC;Initial catalog=Pediatrie;Integrated Security=True";
             SqlConnection sqlConnection = new SqlConnection(connect);
             sqlConnection.Open();

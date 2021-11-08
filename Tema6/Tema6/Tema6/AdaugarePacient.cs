@@ -117,7 +117,6 @@ namespace Tema6
 
         private void btnSalvarePacient_Click(object sender, EventArgs e)
         {
-
             if(txtCNP.Text != string.Empty)
             {
                 string connect = @"Data source=DESKTOP-Q8KT1F7\WINCC;Initial catalog=Pediatrie;Integrated Security=True";
@@ -125,12 +124,12 @@ namespace Tema6
                 sqlConnection.Open();
 
 
-                string insertPacienti = "INSERT INTO Pacienti ([CNP], [Nume], [Prenume], [Sex], [Nume_mama], " +
+                string insertPacient = "INSERT INTO Pacienti ([CNP], [Nume], [Prenume], [Sex], [Nume_mama], " +
                     "[Nume_tata], [Data_nasterii], [Locul_nasterii], [APGAR], [Medic_familie], [Antecedente]) VALUES " +
                     "(@cnp, @nume, @prenume, @sex, @numemama, @numetata, @datanasterii, @loculnasterii, @apgar, @medicfamilie, @antecedente)";
 
 
-                SqlCommand sqlCommand = new SqlCommand(insertPacienti, sqlConnection);
+                SqlCommand sqlCommand = new SqlCommand(insertPacient, sqlConnection);
                 sqlCommand.Parameters.AddWithValue("@cnp", txtCNP.Text);
                 sqlCommand.Parameters.AddWithValue("@nume", txtNume.Text);
                 sqlCommand.Parameters.AddWithValue("@prenume", txtPrenume.Text);
@@ -146,13 +145,13 @@ namespace Tema6
                 sqlConnection.Close();
                 this.DialogResult = DialogResult.OK;
                 this.Close();
+                MessageBox.Show("A fost introdus pacientul in baza de date!", "Succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Application.Restart();
             }
             else
             {
                 MessageBox.Show("Trebuie introdus CNP-ul");
             }
-
         }
     }
 }
