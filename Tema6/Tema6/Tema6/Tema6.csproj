@@ -58,6 +58,12 @@
     <Compile Include="Consultatie.Designer.cs">
       <DependentUpon>Consultatie.cs</DependentUpon>
     </Compile>
+    <Compile Include="FisaPacient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FisaPacient.Designer.cs">
+      <DependentUpon>FisaPacient.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pacient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Consultatie.resx">
       <DependentUpon>Consultatie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FisaPacient.resx">
+      <DependentUpon>FisaPacient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pacient.resx">
       <DependentUpon>Pacient.cs</DependentUpon>

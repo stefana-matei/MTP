@@ -111,6 +111,7 @@ namespace Tema6
             this.btnVizualizareFisaPacient.TabIndex = 6;
             this.btnVizualizareFisaPacient.Text = "Vizualizare fisa pacient";
             this.btnVizualizareFisaPacient.UseVisualStyleBackColor = true;
+            this.btnVizualizareFisaPacient.Click += new System.EventHandler(this.btnVizualizareFisaPacient_Click);
             // 
             // btnAdgRadiografii
             // 

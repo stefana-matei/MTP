@@ -79,6 +79,7 @@ namespace Tema6
         }
 
 
+        //  adaugare consultatie
         private void btnAdaugaConsultatie_Click(object sender, EventArgs e)
         {
 
@@ -92,6 +93,7 @@ namespace Tema6
         }
 
 
+        //  adaugare radiografie
         private void btnAdgRadiografii_Click(object sender, EventArgs e)
         {
             if (dgvBazaDate.CurrentRow.Selected)
@@ -101,6 +103,19 @@ namespace Tema6
             }
             else
                 MessageBox.Show("Trebuie selectat un pacient pentru a adauga o radiografie!", "Atentionare", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+
+        //  vizualizare fisa pacient
+        private void btnVizualizareFisaPacient_Click(object sender, EventArgs e)
+        {
+            if (dgvBazaDate.CurrentRow.Selected)
+            {
+                FisaPacient fisaPacient = new FisaPacient(cnp);
+                fisaPacient.ShowDialog();
+            }
+            else
+                MessageBox.Show("Trebuie selectat un pacient pentru a vizualiza fisa acestuia!", "Atentionare", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
 }
