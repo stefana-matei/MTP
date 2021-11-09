@@ -45,7 +45,7 @@ namespace Tema6
             sqlConnection.Open();
 
 
-            string tablePacientNume = "select * from Pacienti where nume='" + txtNumeCautat.Text + "'";
+            string tablePacientNume = "SELECT * FROM Pacienti WHERE nume='" + txtNumeCautat.Text + "'";
             SqlDataAdapter dataAdapter = new SqlDataAdapter(tablePacientNume, sqlConnection);
             DataSet dataSet = new DataSet();
             dataAdapter.Fill(dataSet, "Pacienti");
@@ -116,6 +116,18 @@ namespace Tema6
             }
             else
                 MessageBox.Show("Trebuie selectat un pacient pentru a vizualiza fisa acestuia!", "Atentionare", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+
+        //  stergere pacient selectat din DataGridView
+        private void btnStergere_Click(object sender, EventArgs e)
+        {
+            if (dgvBazaDate.CurrentRow.Selected)
+            {
+                MessageBox.Show("Sunteti sigur ca doriti stergerea acestui pacient din BD?", "Atentionare", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            }
+            else
+                MessageBox.Show("Trebuie selectat un pacient pentru a vizualiza fisa acestuia!", "Atentionare", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
     }
 }

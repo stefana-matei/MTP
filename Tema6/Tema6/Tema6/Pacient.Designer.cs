@@ -39,6 +39,7 @@ namespace Tema6
             this.btnAdgRadiografii = new System.Windows.Forms.Button();
             this.btnInchidereAplicatie = new System.Windows.Forms.Button();
             this.btnAdaugaPacient = new System.Windows.Forms.Button();
+            this.btnStergere = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBazaDate)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,7 +95,7 @@ namespace Tema6
             // btnAdaugaConsultatie
             // 
             this.btnAdaugaConsultatie.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdaugaConsultatie.Location = new System.Drawing.Point(277, 567);
+            this.btnAdaugaConsultatie.Location = new System.Drawing.Point(294, 567);
             this.btnAdaugaConsultatie.Name = "btnAdaugaConsultatie";
             this.btnAdaugaConsultatie.Size = new System.Drawing.Size(193, 66);
             this.btnAdaugaConsultatie.TabIndex = 5;
@@ -116,7 +117,7 @@ namespace Tema6
             // btnAdgRadiografii
             // 
             this.btnAdgRadiografii.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdgRadiografii.Location = new System.Drawing.Point(509, 567);
+            this.btnAdgRadiografii.Location = new System.Drawing.Point(527, 567);
             this.btnAdgRadiografii.Name = "btnAdgRadiografii";
             this.btnAdgRadiografii.Size = new System.Drawing.Size(193, 66);
             this.btnAdgRadiografii.TabIndex = 7;
@@ -127,7 +128,7 @@ namespace Tema6
             // btnInchidereAplicatie
             // 
             this.btnInchidereAplicatie.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInchidereAplicatie.Location = new System.Drawing.Point(374, 675);
+            this.btnInchidereAplicatie.Location = new System.Drawing.Point(378, 775);
             this.btnInchidereAplicatie.Name = "btnInchidereAplicatie";
             this.btnInchidereAplicatie.Size = new System.Drawing.Size(193, 66);
             this.btnInchidereAplicatie.TabIndex = 8;
@@ -138,7 +139,7 @@ namespace Tema6
             // btnAdaugaPacient
             // 
             this.btnAdaugaPacient.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdaugaPacient.Location = new System.Drawing.Point(32, 567);
+            this.btnAdaugaPacient.Location = new System.Drawing.Point(59, 567);
             this.btnAdaugaPacient.Name = "btnAdaugaPacient";
             this.btnAdaugaPacient.Size = new System.Drawing.Size(193, 66);
             this.btnAdaugaPacient.TabIndex = 9;
@@ -146,11 +147,23 @@ namespace Tema6
             this.btnAdaugaPacient.UseVisualStyleBackColor = true;
             this.btnAdaugaPacient.Click += new System.EventHandler(this.btnAdaugaPacient_Click);
             // 
+            // btnStergere
+            // 
+            this.btnStergere.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStergere.Location = new System.Drawing.Point(378, 671);
+            this.btnStergere.Name = "btnStergere";
+            this.btnStergere.Size = new System.Drawing.Size(193, 66);
+            this.btnStergere.TabIndex = 10;
+            this.btnStergere.Text = "Stergere pacient";
+            this.btnStergere.UseVisualStyleBackColor = true;
+            this.btnStergere.Click += new System.EventHandler(this.btnStergere_Click);
+            // 
             // Pacient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(968, 769);
+            this.ClientSize = new System.Drawing.Size(968, 902);
+            this.Controls.Add(this.btnStergere);
             this.Controls.Add(this.btnAdaugaPacient);
             this.Controls.Add(this.btnInchidereAplicatie);
             this.Controls.Add(this.btnAdgRadiografii);
@@ -182,6 +195,7 @@ namespace Tema6
         private System.Windows.Forms.Button btnAdgRadiografii;
         private System.Windows.Forms.Button btnInchidereAplicatie;
         private System.Windows.Forms.Button btnAdaugaPacient;
+        private System.Windows.Forms.Button btnStergere;
     }
 }
 
