@@ -18,6 +18,7 @@ namespace Tema6
         {
             InitializeComponent();
             this.cnp = cnp;
+            
 
 
             txtCNP.Text = this.cnp;

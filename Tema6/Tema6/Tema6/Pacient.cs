@@ -23,22 +23,11 @@ namespace Tema6
         }
 
 
-        //  incarcare informatii despre pacient din tabela Pacienti
         private void Form1_Load(object sender, EventArgs e)
         {
-            string connect = @"Data source=DESKTOP-Q8KT1F7\WINCC;Initial catalog=Pediatrie;Integrated Security=True";
-            SqlConnection sqlConnection = new SqlConnection(connect);
-            sqlConnection.Open();
-
-
-            string tabelDate = "SELECT * FROM Pacienti"; //  query
-            SqlDataAdapter dataAdapter = new SqlDataAdapter(tabelDate, connect);
-            DataSet dataSet = new DataSet();
-            dataAdapter.Fill(dataSet, "Pacienti");
-            dgvBazaDate.DataSource = dataSet.Tables["Pacienti"].DefaultView;
-            sqlConnection.Close();
+            loadData();
         }
-
+        
 
         //  cautare pacient dupa nume
         private void btnCautareNume_Click(object sender, EventArgs e)
@@ -160,6 +149,29 @@ namespace Tema6
             }
             else
                 MessageBox.Show("Trebuie selectat un pacient pentru a vizualiza fisa acestuia!", "Atentionare", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        }
+
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            loadData();
+        }
+
+
+        //  incarcare informatii despre pacient din tabela Pacienti
+        private void loadData()
+        {
+            string connect = @"Data source=DESKTOP-Q8KT1F7\WINCC;Initial catalog=Pediatrie;Integrated Security=True";
+            SqlConnection sqlConnection = new SqlConnection(connect);
+            sqlConnection.Open();
+
+
+            string tabelDate = "SELECT * FROM Pacienti"; //  query
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(tabelDate, connect);
+            DataSet dataSet = new DataSet();
+            dataAdapter.Fill(dataSet, "Pacienti");
+            dgvBazaDate.DataSource = dataSet.Tables["Pacienti"].DefaultView;
+            sqlConnection.Close();
         }
     }
 }

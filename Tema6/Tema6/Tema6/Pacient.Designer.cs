@@ -40,6 +40,7 @@ namespace Tema6
             this.btnInchidereAplicatie = new System.Windows.Forms.Button();
             this.btnAdaugaPacient = new System.Windows.Forms.Button();
             this.btnStergere = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBazaDate)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,7 +66,7 @@ namespace Tema6
             // 
             // txtNumeCautat
             // 
-            this.txtNumeCautat.Location = new System.Drawing.Point(324, 105);
+            this.txtNumeCautat.Location = new System.Drawing.Point(294, 105);
             this.txtNumeCautat.Name = "txtNumeCautat";
             this.txtNumeCautat.Size = new System.Drawing.Size(337, 22);
             this.txtNumeCautat.TabIndex = 2;
@@ -73,7 +74,7 @@ namespace Tema6
             // btnCautareNume
             // 
             this.btnCautareNume.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCautareNume.Location = new System.Drawing.Point(749, 92);
+            this.btnCautareNume.Location = new System.Drawing.Point(657, 90);
             this.btnCautareNume.Name = "btnCautareNume";
             this.btnCautareNume.Size = new System.Drawing.Size(137, 45);
             this.btnCautareNume.TabIndex = 3;
@@ -158,11 +159,23 @@ namespace Tema6
             this.btnStergere.UseVisualStyleBackColor = true;
             this.btnStergere.Click += new System.EventHandler(this.btnStergere_Click);
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.Location = new System.Drawing.Point(805, 90);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(137, 45);
+            this.btnRefresh.TabIndex = 11;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // Pacient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(968, 902);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnStergere);
             this.Controls.Add(this.btnAdaugaPacient);
             this.Controls.Add(this.btnInchidereAplicatie);
@@ -196,6 +209,7 @@ namespace Tema6
         private System.Windows.Forms.Button btnInchidereAplicatie;
         private System.Windows.Forms.Button btnAdaugaPacient;
         private System.Windows.Forms.Button btnStergere;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }
 
