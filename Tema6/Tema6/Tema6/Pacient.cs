@@ -32,7 +32,6 @@ namespace Tema6
                 btnCautareNume.Enabled = false;
                 btnRefresh.Enabled = false;
             }
-
         }
         
 
@@ -60,14 +59,7 @@ namespace Tema6
         private void btnAdaugaPacient_Click(object sender, EventArgs e)
         {
             AdaugarePacient adaugarePacient = new AdaugarePacient();
-            adaugarePacient.Show();
-        }
-
-
-        //  inchidere aplicatie
-        private void btnInchidereAplicatie_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            adaugarePacient.ShowDialog();
         }
 
 
@@ -150,17 +142,15 @@ namespace Tema6
                     sqlCommandRadiografii.ExecuteNonQuery();
                     sqlConnection.Close();
                     MessageBox.Show("Pacientul a fost sters cu succes!");
-                    Application.Restart();
+                    loadData();
                 }
-
-
             }
             else
                 MessageBox.Show("Trebuie selectat un pacient pentru a vizualiza fisa acestuia!", "Atentionare", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
 
-        //  buton refresh
+        //  buton refresh dupa ce cautam un pacient
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             txtNumeCautat.Text = "";
@@ -193,6 +183,13 @@ namespace Tema6
                 btnCautareNume.Enabled = true;
                 btnRefresh.Enabled = true;
             }
+        }
+
+
+        //  inchidere aplicatie
+        private void btnInchidereAplicatie_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

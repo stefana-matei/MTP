@@ -80,7 +80,6 @@ namespace Tema6
                 {
                     return false;
                 }
-                    
             }
         }
 
@@ -134,7 +133,7 @@ namespace Tema6
                 sqlCommand.Parameters.AddWithValue("@nume", txtNume.Text);
                 sqlCommand.Parameters.AddWithValue("@prenume", txtPrenume.Text);
                 sqlCommand.Parameters.AddWithValue("@sex", txtSex.Text);
-                sqlCommand.Parameters.AddWithValue("@numemama", txtNumeTata.Text);
+                sqlCommand.Parameters.AddWithValue("@numemama", txtNumeMama.Text);
                 sqlCommand.Parameters.AddWithValue("@numetata", txtNumeTata.Text);
                 sqlCommand.Parameters.AddWithValue("@datanasterii", dtpDataNasterii.Value);
                 sqlCommand.Parameters.AddWithValue("@loculnasterii", txtLocNastere.Text);
