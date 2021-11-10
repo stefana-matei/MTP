@@ -26,6 +26,13 @@ namespace Tema6
         private void Form1_Load(object sender, EventArgs e)
         {
             loadData();
+           
+            if (txtNumeCautat.Text == string.Empty)
+            {
+                btnCautareNume.Enabled = false;
+                btnRefresh.Enabled = false;
+            }
+
         }
         
 
@@ -45,6 +52,7 @@ namespace Tema6
             sqlConnection.Close();
             dataAdapter.Dispose();
             dataSet.Dispose();
+            btnCautareNume.Enabled = false;
         }
 
 
@@ -152,9 +160,12 @@ namespace Tema6
         }
 
 
+        //  buton refresh
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            loadData();
+            txtNumeCautat.Text = "";
+            Form1_Load(sender, e);
+            txtNumeCautat_MouseLeave(sender, e);
         }
 
 
@@ -172,6 +183,16 @@ namespace Tema6
             dataAdapter.Fill(dataSet, "Pacienti");
             dgvBazaDate.DataSource = dataSet.Tables["Pacienti"].DefaultView;
             sqlConnection.Close();
+        }
+
+
+        private void txtNumeCautat_MouseLeave(object sender, EventArgs e)
+        {
+            if (txtNumeCautat.Text != string.Empty)
+            {
+                btnCautareNume.Enabled = true;
+                btnRefresh.Enabled = true;
+            }
         }
     }
 }

@@ -70,6 +70,7 @@ namespace Tema6
             this.txtNumeCautat.Name = "txtNumeCautat";
             this.txtNumeCautat.Size = new System.Drawing.Size(337, 22);
             this.txtNumeCautat.TabIndex = 2;
+            this.txtNumeCautat.MouseLeave += new System.EventHandler(this.txtNumeCautat_MouseLeave);
             // 
             // btnCautareNume
             // 
