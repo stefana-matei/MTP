@@ -22,6 +22,8 @@ namespace Tema6
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
+
+        //  incarcare informatii despre pacient din tabela Pacienti
         private void Form1_Load(object sender, EventArgs e)
         {
             string connect = @"Data source=DESKTOP-Q8KT1F7\WINCC;Initial catalog=Pediatrie;Integrated Security=True";
@@ -29,7 +31,7 @@ namespace Tema6
             sqlConnection.Open();
 
 
-            string tabelDate = "select * from Pacienti"; //  query
+            string tabelDate = "SELECT * FROM Pacienti"; //  query
             SqlDataAdapter dataAdapter = new SqlDataAdapter(tabelDate, connect);
             DataSet dataSet = new DataSet();
             dataAdapter.Fill(dataSet, "Pacienti");
@@ -38,6 +40,7 @@ namespace Tema6
         }
 
 
+        //  cautare pacient dupa nume
         private void btnCautareNume_Click(object sender, EventArgs e)
         {
             string connect = @"Data source=DESKTOP-Q8KT1F7\WINCC;Initial catalog=Pediatrie;Integrated Security=True";
@@ -56,6 +59,7 @@ namespace Tema6
         }
 
 
+        //  adaugare nou pacient
         private void btnAdaugaPacient_Click(object sender, EventArgs e)
         {
             AdaugarePacient adaugarePacient = new AdaugarePacient();
@@ -63,12 +67,14 @@ namespace Tema6
         }
 
 
+        //  inchidere aplicatie
         private void btnInchidereAplicatie_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
 
+        //  extragem cnp-ul pacientului selectat din DataGridView
         private void dgvBazaDate_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dgvBazaDate.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
@@ -124,7 +130,33 @@ namespace Tema6
         {
             if (dgvBazaDate.CurrentRow.Selected)
             {
-                MessageBox.Show("Sunteti sigur ca doriti stergerea acestui pacient din BD?", "Atentionare", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if(MessageBox.Show("Sunteti sigur ca doriti stergerea acestui pacient din BD?", "Atentionare", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    string connect = @"Data source=DESKTOP-Q8KT1F7\WINCC;Initial catalog=Pediatrie;Integrated Security=True";
+                    SqlConnection sqlConnection = new SqlConnection(connect);
+                    sqlConnection.Open();
+
+
+                    string queryPacientStergere = "DELETE FROM Pacienti" +
+                        " WHERE CNP='" + cnp + "'";
+                    string queryConsultatiiStergere = "DELETE FROM Consultatii" +
+                        " WHERE CNP='" + cnp + "'";
+                    string queryRadiografiiStergere = "DELETE FROM Radiografii" +
+                        " WHERE CNP='" + cnp + "'";
+
+
+                    SqlCommand sqlCommandPacient = new SqlCommand(queryPacientStergere, sqlConnection);
+                    SqlCommand sqlCommandConsultatii = new SqlCommand(queryConsultatiiStergere, sqlConnection);
+                    SqlCommand sqlCommandRadiografii = new SqlCommand(queryRadiografiiStergere, sqlConnection);
+                    sqlCommandPacient.ExecuteNonQuery();
+                    sqlCommandConsultatii.ExecuteNonQuery();
+                    sqlCommandRadiografii.ExecuteNonQuery();
+                    sqlConnection.Close();
+                    MessageBox.Show("Pacientul a fost sters cu succes!");
+                    Application.Restart();
+                }
+
+
             }
             else
                 MessageBox.Show("Trebuie selectat un pacient pentru a vizualiza fisa acestuia!", "Atentionare", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
