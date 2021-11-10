@@ -13,6 +13,7 @@ namespace Tema6
 {
     public partial class AdaugarePacient : Form
     {
+
         public AdaugarePacient()
         {
             InitializeComponent();
