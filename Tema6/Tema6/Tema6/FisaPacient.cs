@@ -20,7 +20,6 @@ namespace Tema6
             this.cnp = cnp;
             
 
-
             txtCNP.Text = this.cnp;
         }
 
