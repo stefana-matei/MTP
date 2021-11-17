@@ -12,11 +12,14 @@ namespace Tema7
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string[] medici = File.ReadAllLines(Server.MapPath("~/Fisiere/") + "medici.txt");
-            foreach(var line in medici)
+            if (!IsPostBack)
             {
-                string[] medic = line.Split(',');
-                ddlMedici.Items.Add(medic[0]);
+                string[] medici = File.ReadAllLines(Server.MapPath("~/Fisiere/") + "medici.txt");
+                foreach (var line in medici)
+                {
+                    string[] medic = line.Split(',');
+                    ddlMedici.Items.Add(medic[0]);
+                }
             }
         }
 

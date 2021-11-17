@@ -27,7 +27,7 @@
             </tr>
             <tr>
                 <td style="text-align: center">Medic&nbsp;
-                    <asp:DropDownList ID="ddlMedici" runat="server" style="margin-left: 4px" Width="187px">
+                    <asp:DropDownList ID="ddlMedici" runat="server" AutoPostBack="true" style="margin-left: 4px" Width="187px">
                     </asp:DropDownList>
                 </td>
             </tr>
