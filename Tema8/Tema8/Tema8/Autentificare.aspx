@@ -11,8 +11,18 @@
         <div>
             <div>
 
-
-                <h1 style="text-align: center;">Autentificare</h1>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <h1 style="text-align: center;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Autentificare</h1>
                 <br />
                 <br />
 
@@ -42,7 +52,26 @@
 
 
                     <tr>
+                        <td style="text-align: right">
+                            &nbsp;</td>
+
+                        <td style="text-align:left;">
+                            &nbsp;</td>
+                    </tr>
+
+
+                    <tr>
+                        <td style="text-align: right">
+                            &nbsp;</td>
+
+                        <td style="text-align:left;">
+                            &nbsp;</td>
+                    </tr>
+
+
+                    <tr>
                         <td colspan="2">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <asp:Button ID="btnAutentificare" Text="Autentificare" runat="server" OnClick="btnAutentificare_Click" />
                         </td>
                     </tr>
@@ -50,7 +79,7 @@
 
                     <tr>
                         <td colspan="2">
-                            <asp:Label ID="lblMesajEroare" Text="mesaj eroare" runat="server" ForeColor="Red"></asp:Label>
+                            <asp:Label ID="lblMesajEroare" Text="" runat="server" ForeColor="Red"></asp:Label>
                         </td>
                     </tr>
                 </table>
