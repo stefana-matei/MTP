@@ -13,10 +13,5 @@ namespace Tema8
         {
 
         }
-
-        protected void btnAutentificare_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
