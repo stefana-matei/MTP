@@ -27,7 +27,7 @@
                 <br />
 
 
-                <table style="width: 50%; text-align: center; margin-left: auto; margin-right: auto;">
+                <table style="width: 50%; text-align: center; margin-left: auto; margin-right: auto; border: 1px solid grey; padding: 70px;border-radius:15px; ">
                     
                     <tr>
                         <td style="text-align: right; width: 50%;">
@@ -79,6 +79,13 @@
 
                     <tr>
                         <td colspan="2">
+                            &nbsp;</td>
+                    </tr>
+
+
+                    <tr>
+                        <td colspan="2">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <asp:Label ID="lblMesajEroare" Text="" runat="server" ForeColor="Red"></asp:Label>
                         </td>
                     </tr>
