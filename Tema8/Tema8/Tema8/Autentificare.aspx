@@ -29,9 +29,28 @@
                         </td>
                     </tr>
 
+
                     <tr>
                         <td style="text-align: right">
                             <label>Parola</label>&emsp;
+                        </td>
+
+                        <td style="text-align:left;">
+                            <asp:TextBox ID="txtParola" runat="server" TextMode="Password"></asp:TextBox>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td colspan="2">
+                            <asp:Button ID="btnAutentificare" Text="Autentificare" runat="server" OnClick="btnAutentificare_Click" />
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td colspan="2">
+                            <asp:Label ID="lblMesajEroare" Text="mesaj eroare" runat="server" ForeColor="Red"></asp:Label>
                         </td>
                     </tr>
                 </table>
