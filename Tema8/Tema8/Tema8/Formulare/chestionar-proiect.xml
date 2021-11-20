@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Chestionar>
+<textbox nume="functii" detalii="Care sunt functiile implementate de dvs. in cadrul proiectului?"/>
+<radio nume="dificultate" detalii="Pe o scara de la 1 la 5 care a fost dificultatea proiectului?">
+<val>1</val>
+<val>2</val>
+<val>3</val>
+<val>4</val>
+<val>5</val>
+</radio>
+<radio nume="implementare" detalii="Care a fost intervalul de ore alocat pentru terminarea proiectului?">
+<val>50-100</val>
+<val>100-300</val>
+<val>300-500</val>
+</radio>
+<radio nume="limbaj" detalii="Care a fost limbajul de programare cel mai folosit?">
+<val>C++</val>
+<val>C#</val>
+<val>Java</val>
+</radio>
+</Chestionar>
