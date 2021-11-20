@@ -13,5 +13,10 @@ namespace Tema8
         {
 
         }
+
+        protected void btnAdaugare_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
