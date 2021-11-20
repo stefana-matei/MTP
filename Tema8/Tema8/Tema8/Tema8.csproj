@@ -73,6 +73,7 @@
     <Content Include="Home.aspx" />
     <Content Include="my.css" />
     <Content Include="AlocareProiect.aspx" />
+    <Content Include="ProiecteFirma.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -117,6 +118,13 @@
     </Compile>
     <Compile Include="AlocareProiect.aspx.designer.cs">
       <DependentUpon>AlocareProiect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProiecteFirma.aspx.cs">
+      <DependentUpon>ProiecteFirma.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProiecteFirma.aspx.designer.cs">
+      <DependentUpon>ProiecteFirma.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
