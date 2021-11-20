@@ -39,7 +39,7 @@
                 <td class="auto-style4">&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <td class="auto-style4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Label ID="Label1" runat="server" Text="CNP"></asp:Label>
                 &nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:TextBox ID="txtCNP" runat="server"></asp:TextBox>
@@ -50,7 +50,7 @@
             </tr>
             <tr>
                 <td class="auto-style5">Selecteaza proiect&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; <asp:DropDownList ID="ddlProiecte" runat="server">
+                    &nbsp;&nbsp;<asp:DropDownList ID="ddlProiecte" runat="server">
                     </asp:DropDownList>
                 </td>
             </tr>
