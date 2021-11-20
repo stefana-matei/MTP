@@ -16,11 +16,11 @@
     .auto-style6 {
         font-weight: bold;
     }
-        .auto-style7 {
-            height: 34px;
-            text-align: left;
-        }
-    </style>
+    .auto-style7 {
+        height: 34px;
+        text-align: left;
+    }
+</style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <form id="form1" runat="server">
