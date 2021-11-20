@@ -71,6 +71,7 @@
     <Content Include="Autentificare.aspx" />
     <Content Include="Chestionar.aspx" />
     <Content Include="Home.aspx" />
+    <Content Include="MuncaAngajat.aspx" />
     <Content Include="my.css" />
     <Content Include="AlocareProiect.aspx" />
     <Content Include="ProiecteFirma.aspx" />
@@ -104,6 +105,13 @@
     </Compile>
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MuncaAngajat.aspx.cs">
+      <DependentUpon>MuncaAngajat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MuncaAngajat.aspx.designer.cs">
+      <DependentUpon>MuncaAngajat.aspx</DependentUpon>
     </Compile>
     <Compile Include="PageMaster.Master.cs">
       <DependentUpon>PageMaster.Master</DependentUpon>
