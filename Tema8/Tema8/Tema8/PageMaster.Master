@@ -17,9 +17,9 @@
 </header>
 <nav id="nav">
     <ul>
+        <li><a href="Home.aspx">Home</a></li>
         <li><a href="#">Angajati</a></li>
-        <li><a href="#">Proiecte</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="ProiecteFirma.aspx">Proiecte</a></li>
     </ul>
 </nav>
     <div id="con">
