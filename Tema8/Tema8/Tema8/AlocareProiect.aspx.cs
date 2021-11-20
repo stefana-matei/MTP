@@ -51,6 +51,35 @@ namespace Tema8
 
         protected void btnAdaugare_Click(object sender, EventArgs e)
         {
+            string connect = @"Data source=DESKTOP-Q8KT1F7\WINCC;Initial catalog=Firma;Integrated Security=True";
+            SqlConnection sqlConnection = new SqlConnection(connect);
+            SqlCommand sqlCommand;
+
+
+            try
+            {
+                sqlConnection.Open();
+                sqlCommand = new SqlCommand("INSERT INTO AlocareProiecte (cnp,numeProiect) VALUES (@cnp,@numeproiect) ", sqlConnection);
+                sqlCommand.Parameters.AddWithValue("@cnp", txtCNP.Text.Trim());
+                sqlCommand.Parameters.AddWithValue("@numeproiect", ddlProiecte.Text.Trim());
+
+
+                int rowsAffected = sqlCommand.ExecuteNonQuery();
+                if (rowsAffected == 1)
+                {
+                    Response.Redirect("Home.aspx");
+                }
+                else
+                    lblEroareBD.Text = "Eroare inserare";
+            }
+            catch (Exception exception)
+            {
+                lblEroareBD.Text = "Eroare la deschiderea bazei de date " + exception.Message;
+            }
+            finally
+            {
+                sqlConnection.Close();
+            }
 
         }
     }
