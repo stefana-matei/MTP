@@ -67,21 +67,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Angajati.aspx" />
+    <Content Include="AdaugareAngajat.aspx" />
     <Content Include="Autentificare.aspx" />
     <Content Include="Chestionar.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="my.css" />
-    <Content Include="Proiecte.aspx" />
+    <Content Include="AlocareProiect.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Angajati.aspx.cs">
-      <DependentUpon>Angajati.aspx</DependentUpon>
+    <Compile Include="AdaugareAngajat.aspx.cs">
+      <DependentUpon>AdaugareAngajat.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Angajati.aspx.designer.cs">
-      <DependentUpon>Angajati.aspx</DependentUpon>
+    <Compile Include="AdaugareAngajat.aspx.designer.cs">
+      <DependentUpon>AdaugareAngajat.aspx</DependentUpon>
     </Compile>
     <Compile Include="Autentificare.aspx.cs">
       <DependentUpon>Autentificare.aspx</DependentUpon>
@@ -111,12 +111,12 @@
     <Compile Include="PageMaster.Master.designer.cs">
       <DependentUpon>PageMaster.Master</DependentUpon>
     </Compile>
-    <Compile Include="Proiecte.aspx.cs">
-      <DependentUpon>Proiecte.aspx</DependentUpon>
+    <Compile Include="AlocareProiect.aspx.cs">
+      <DependentUpon>AlocareProiect.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Proiecte.aspx.designer.cs">
-      <DependentUpon>Proiecte.aspx</DependentUpon>
+    <Compile Include="AlocareProiect.aspx.designer.cs">
+      <DependentUpon>AlocareProiect.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
