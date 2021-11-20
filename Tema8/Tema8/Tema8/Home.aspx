@@ -68,7 +68,7 @@
             <tr>
                 <td class="auto-style2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <div class="auto-style5">
-                    <asp:GridView ID="gvAngajati" runat="server" OnRowCommand="gvAngajati_RowCommand">
+                    <asp:GridView ID="gvAngajati" runat="server" OnRowCommand="gvAngajati_RowCommand" Height="181px" Width="329px">
                     </asp:GridView>
                     </div>
 &nbsp;&nbsp;
