@@ -19,7 +19,7 @@
         }
         .auto-style6 {
             width: 577px;
-            text-align: center;
+            text-align: right;
         }
         .auto-style7 {
             width: 577px;
@@ -80,6 +80,12 @@
                 <td>&nbsp;</td>
             </tr>
             <tr>
+                <td class="auto-style2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Button ID="btnMuncaAngajat" runat="server" OnClick="btnMuncaAngajat_Click" Text="Detalii munca unui angajat" />
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
                 <td class="auto-style3"></td>
                 <td class="auto-style4"></td>
             </tr>
@@ -100,22 +106,22 @@
                 <td class="auto-style5">&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <td class="auto-style6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td class="auto-style8">
                     <asp:Label ID="lblChestionar" runat="server" Text="Selectati un chestionar:"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:DropDownList ID="ddlChestionare" runat="server">
                     </asp:DropDownList>
-                </td>
-                <td class="auto-style8">&nbsp;<asp:Button ID="btnCompletareChestionar" runat="server" Text="Completeaza chestionar" Enabled="False" OnClick="btnCompletareChestionar_Click" />
-                </td>
+                    &nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style3"></td>
-                <td class="auto-style4"></td>
+                <td class="auto-style4">&nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style2">&nbsp;</td>
-                <td>&nbsp;</td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Button ID="btnCompletareChestionar" runat="server" Text="Completeaza chestionar" Enabled="False" OnClick="btnCompletareChestionar_Click" />
+                </td>
             </tr>
             <tr>
                 <td class="auto-style2">&nbsp;</td>

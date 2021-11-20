@@ -125,5 +125,17 @@ namespace Tema8
             url = "Chestionar.aspx?cnp=" + cnp + "&chestionar=" + ddlChestionare.Text;
             Response.Redirect(url);
         }
+
+        protected void btnMuncaAngajat_Click(object sender, EventArgs e)
+        {
+            string url;
+            string cnp = gvAngajati.SelectedRow.Cells[0].Text.ToString().Trim();
+            string nume = gvAngajati.SelectedRow.Cells[1].Text.ToString().Trim();
+            string prenume = gvAngajati.SelectedRow.Cells[2].Text.ToString().Trim();
+
+
+            url = "MuncaAngajat.aspx?cnp=" + cnp + "&nume=" + nume + "&prenume=" + prenume;
+            Response.Redirect(url);
+        }
     }
 }
