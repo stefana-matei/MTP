@@ -10,6 +10,9 @@
         .auto-style3 {
             text-align: left;
         }
+        .auto-style4 {
+            height: 26px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -48,7 +51,7 @@
                 </td>
             </tr>
             <tr>
-                <td>&nbsp;</td>
+                <td class="auto-style4"></td>
             </tr>
             <tr>
                 <td>&nbsp;</td>
