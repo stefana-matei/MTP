@@ -67,17 +67,35 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Angajati.aspx" />
     <Content Include="Autentificare.aspx" />
+    <Content Include="Chestionar.aspx" />
     <Content Include="Home.aspx" />
+    <Content Include="my.css" />
+    <Content Include="Proiecte.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Angajati.aspx.cs">
+      <DependentUpon>Angajati.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Angajati.aspx.designer.cs">
+      <DependentUpon>Angajati.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Autentificare.aspx.cs">
       <DependentUpon>Autentificare.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Autentificare.aspx.designer.cs">
       <DependentUpon>Autentificare.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Chestionar.aspx.cs">
+      <DependentUpon>Chestionar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chestionar.aspx.designer.cs">
+      <DependentUpon>Chestionar.aspx</DependentUpon>
     </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
@@ -86,9 +104,24 @@
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
+    <Compile Include="PageMaster.Master.cs">
+      <DependentUpon>PageMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageMaster.Master.designer.cs">
+      <DependentUpon>PageMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Proiecte.aspx.cs">
+      <DependentUpon>Proiecte.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Proiecte.aspx.designer.cs">
+      <DependentUpon>Proiecte.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="PageMaster.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
