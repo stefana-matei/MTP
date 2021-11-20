@@ -1,0 +1,35 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PageMaster.Master.cs" Inherits="Tema8.Home" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <title></title>
+    <link href="css/my.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="my.css">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+</head>
+
+<body>
+<header id="header"> 
+<h1>Managementul unei firme</h1>
+</header>
+<nav id="nav">
+    <ul>
+        <li><a href="Angajati.aspx">Angajati</a></li>
+        <li><a href="Proiecte.aspx">Proiecte</a></li>
+        <li><a href="Contact.aspx">Contact</a></li>
+    </ul>
+</nav>
+    <div id="con">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+        </asp:ContentPlaceHolder>
+    </div>
+    
+<footer id="footer">
+    
+</footer>
+</body>
+</html>
