@@ -16,7 +16,9 @@
                 <td class="auto-style2">
                     <asp:Label ID="lblChestionar" runat="server"></asp:Label>
                 </td>
-                <td>&nbsp;</td>
+                <td>
+                    <asp:Button ID="btnSalvareChestionar" runat="server" OnClick="btnSalvareChestionar_Click" Text="Salveaza chestionar" />
+                </td>
             </tr>
             <tr>
                 <td class="auto-style2">&nbsp;</td>
@@ -25,7 +27,7 @@
             <tr>
                 <td class="auto-style2">&nbsp;</td>
                 <td>
-                    <asp:TextBox ID="txtRaspunsuriChestionar" runat="server" Height="92px" Width="517px"></asp:TextBox>
+                    <asp:TextBox ID="txtRaspunsuriChestionar" runat="server" Height="92px" TextMode="MultiLine" Width="517px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
