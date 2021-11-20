@@ -92,7 +92,7 @@ namespace Tema8
 
         protected void btnAdaugaAngajat_Click(object sender, EventArgs e)
         {
-            string url = "Angajati.aspx";
+            string url = "AdaugareAngajat.aspx";
             Response.Redirect(url);
         }
 
@@ -101,7 +101,7 @@ namespace Tema8
         {
             string url;
             string cnp = gvAngajati.SelectedRow.Cells[0].Text.ToString().Trim();
-            url = "Proiecte.aspx?cnp=" + cnp;
+            url = "AlocareProiect.aspx?cnp=" + cnp;
             Response.Redirect(url);
         }
 
