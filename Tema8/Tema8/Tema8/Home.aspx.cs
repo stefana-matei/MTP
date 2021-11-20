@@ -122,7 +122,7 @@ namespace Tema8
         {
             string url;
             string cnp = gvAngajati.SelectedRow.Cells[0].Text.ToString().Trim();
-            url = "Contact.aspx?cnp=" + cnp + "&chestionar=" + ddlChestionare.Text;
+            url = "Chestionar.aspx?cnp=" + cnp + "&chestionar=" + ddlChestionare.Text;
             Response.Redirect(url);
         }
     }
