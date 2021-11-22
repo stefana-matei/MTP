@@ -83,7 +83,7 @@
                     </asp:GridView>
                     <br />
                     <br />
-                    <asp:Label ID="lblOreLucrateTotal" runat="server"></asp:Label>
+                    <asp:Label ID="lblOreLucrateTotal" runat="server" Font-Bold="True"></asp:Label>
                     <br />
                     <br />
                 </td>
